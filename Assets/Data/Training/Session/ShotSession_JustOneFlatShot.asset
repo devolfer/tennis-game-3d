@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb3e9baaaf56c4f6098fba8da3584243, type: 3}
+  m_Name: ShotSession_JustOneFlatShot
+  m_EditorClassIdentifier: 
+  sessionName: Just One Flat Shot
+  description: Can you handle one insanely difficult shot ;-) ?
+  menuSprite: {fileID: 21300000, guid: 7b9585e0bdaa1449ea85d43aeb24aa92, type: 3}
+  uiScenes:
+  - {fileID: 11400000, guid: d48105f36e7c54017b4d44718fccbba6, type: 2}
+  - {fileID: 11400000, guid: b00526ff6d9e24a2fb8a884f489e0c78, type: 2}
+  - {fileID: 11400000, guid: 4e3af772976bc4021bf46083d48f5da1, type: 2}
+  - {fileID: 11400000, guid: 6f01e559f33dc41569423bc15ae5f882, type: 2}
+  Score: 0
+  MaximumScore: 0
+  shootInterval: 4.5
+  shotTaskList:
+  - Played: 0
+    ballMachineShot:
+      shotType: 0
+      peakHeight: 6
+      gravityMagnitude: 25
+      bounceForce: {x: 0, y: 0, z: 0}
+      startPosition: {x: 0, y: 3, z: 48}
+      targetPosition: {x: 0, y: 0.5, z: -20}
+    taskShotType: 1
+    taskCourtZone:
+      minBounds: {x: -16.46, y: 0, z: 15.85333}
+      maxBounds: {x: 16.46, y: 0.5, z: 47.56}
