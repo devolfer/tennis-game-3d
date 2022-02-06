@@ -33,8 +33,10 @@ The game can be played via _Keyboard & Mouse_ OR _Gamepad_:
 * **Drop Shot/Lob**: Left Shift OR Left Trigger
 * **Pause**: Escape OR Start
 
+To switch between different shots, simply press the corresponding button once at any time. As long as the ball touches the hitting zone of the player character (green box), it will automatically be hit towards the aiming point at the other side of the net.
+
 ## Technologies
-* Unity 2020.2
+* Unity 2021.2
 * .NET 4.x / C# 8.0
 
 ## License
