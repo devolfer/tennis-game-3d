@@ -36,8 +36,9 @@ public class ShotSessionTaskDisplay : MonoBehaviour {
 
     private void SetTaskShotText(ShotType shotType, bool animated) {
         if (animated) {
-            // TODO
-            taskShotText.text = shotType.ToString().ToSpaceBeforeUpperCase();
+            this.DoRoutine(0.25f, endAction: () => {
+                taskShotText.text = $"{shotType.ToString().ToSpaceBeforeUpperCase()}";
+            });
         } else {
             taskShotText.text = shotType.ToString().ToSpaceBeforeUpperCase();
         }
@@ -55,8 +56,6 @@ public class ShotSessionTaskDisplay : MonoBehaviour {
         };
 
         if (animated) {
-            // const float duration = 0.5f;
-            
             AnimationOperation colourOperation = new AnimationOperation(taskShotBackgroundImage.gameObject, UIAnimationType.Colour, EaseType.SmoothStepSmoother, 0, 0.5f) {
                 colourSettings = new AnimationOperation.ColourSettings {
                     startColour = taskShotBackgroundImage.color,
@@ -67,10 +66,6 @@ public class ShotSessionTaskDisplay : MonoBehaviour {
             colourAnimation.AddOperation(colourOperation);
             
             colourAnimation.Play();
-
-            // this.DoRoutine(duration, null, t => {
-            //     taskShotBackgroundImage.color = Lerp.Value(taskShotBackgroundImage.color, targetColour, t, Easing.SmoothStep.Smoother);
-            // });
         } else {
             taskShotBackgroundImage.color = targetColour;
         }
